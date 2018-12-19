@@ -53,6 +53,13 @@ app.get('/about', (req, res) => {
   }) // pass in the page you are rendering, second argument is an object which properties can be added to hbs template
 })
 
+app.get('/projects', (req, res) => {
+  res.render('projects.hbs', {
+    pageTitle: 'Projects Page',
+    message: 'Portfolio Page'
+  })
+})
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Bad Request'
